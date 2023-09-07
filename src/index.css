@@ -10,3 +10,9 @@
     --primary-text-color: #ffffff;
     /* ... */
   }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg-color);
+}

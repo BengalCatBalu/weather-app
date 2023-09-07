@@ -18,6 +18,12 @@ export const ThemeButton = () => {
   }, [theme]);
 
   return (
-    <Switch className="custom-switch" defaultChecked onChange={toggleTheme} />
+    <div>
+      <Switch className="custom-switch" defaultChecked onChange={toggleTheme} />
+      <h1 className='small_sign'>
+        {theme === "light" ? "Light Mode" : "Dark Mode"}
+      </h1>
+    </div>
+    
   )
 }

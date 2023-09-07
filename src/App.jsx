@@ -1,24 +1,28 @@
 import { useState } from "react";
 import { Navbar } from "./components/navbar/Navbar";
 import "./App.css";
-import { TimeCard } from "./components/Cards/TimeCard/TimeCard";
-import { MainCard } from "./components/Cards/MainCard/MainCard";
-import { LastDaysCard } from "./components/Cards/LastDaysCard/LastDaysCard";
-import { HourlyForecast } from "./components/Cards/HourlyForecast/HourlyForecast";
+import { MainPageComponent } from "./components/MainPageComponent/MainPageComponent";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Dashboard } from "./components/Dashboard/Dashboard";
+
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MainPageComponent/>,
+    },
+
+    {
+      path: "/:city",
+      element: (
+        <Dashboard/>
+      ),
+    },
+  ]);
   return (
     <div className={"main"}>
       <Navbar />
-      <section className={"content"}>
-        <div className={"first_row"}>
-          <TimeCard/>
-          <MainCard/>
-        </div>
-        <div className={"second_row"}>
-          <LastDaysCard/>
-          <HourlyForecast/>
-        </div>
-      </section>
+      <RouterProvider router={router} />
     </div>
   );
 }
