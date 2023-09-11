@@ -18,7 +18,7 @@ export const ThemeButton = () => {
   }, [theme]);
 
   return (
-    <div>
+    <div style={{marginTop: "1rem"}}>
       <Switch className="custom-switch" defaultChecked onChange={toggleTheme} />
       <h1 className='small_sign'>
         {theme === "light" ? "Light Mode" : "Dark Mode"}

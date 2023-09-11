@@ -1,0 +1,17 @@
+export const weatherIcons = {
+    clear: "wi-day-sunny",
+    clouds: "wi-day-cloudy",
+    rain: "wi-day-rain",
+    snow: "wi-day-snow",
+    thunderstorm: "wi-day-thunderstorm",
+    mist: "wi-day-fog",
+    drizzle: "wi-day-sprinkle",
+    smoke: "wi-smoke",
+    haze: "wi-day-haze",
+    dust: "wi-dust",
+    fog: "wi-day-fog",
+    sand: "wi-sandstorm",
+    ash: "wi-volcano",
+    squall: "wi-strong-wind",
+    tornado: "wi-tornado",
+  };

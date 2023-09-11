@@ -4,15 +4,16 @@ import { MainCard } from "../Cards/MainCard/MainCard";
 import { LastDaysCard } from "../Cards/LastDaysCard/LastDaysCard";
 import { HourlyForecast } from "../Cards/HourlyForecast/HourlyForecast";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export const Dashboard = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [forecastData, setForecastData] = useState(null);
+  let { city } = useParams();
+  city = city.charAt(0).toUpperCase() + city.slice(1);
 
   useEffect(() => {
     const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
-
-    const city = "London";
 
     const weather_url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const forecast_url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
@@ -28,18 +29,15 @@ export const Dashboard = () => {
       });
 
     fetch(forecast_url)
-        .then((response) => response.json())
-        .then((data) => {
-            setForecastData(data);
-            console.log("Forecast data:", data);
-            })
-        .catch((error) => {
-            console.error("Error fetching forecast data:", error);
-            }
-        );
+      .then((response) => response.json())
+      .then((data) => {
+        setForecastData(data);
+        console.log("Forecast data:", data);
+      })
+      .catch((error) => {
+        console.error("Error fetching forecast data:", error);
+      });
   }, []);
-
-
 
   const sunrise = new Date(
     weatherData?.sys.sunrise * 1000
@@ -60,16 +58,16 @@ export const Dashboard = () => {
           )}
           sunrise={sunrise}
           sunset={sunset}
-          main = {weatherData?.weather[0].main}
+          main={weatherData?.weather[0].main}
           humidity={weatherData?.main.humidity}
           windSpeed={weatherData?.wind.speed}
           pressure={weatherData?.main.pressure}
-          uv = {weatherData?.visibility}
+          uv={weatherData?.visibility}
         />
       </div>
       <div className={"second_row"}>
-        <LastDaysCard />
-        <HourlyForecast />
+        <LastDaysCard forecastData={forecastData}/>
+        <HourlyForecast forecastData = {forecastData} />
       </div>
     </section>
   );

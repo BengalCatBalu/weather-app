@@ -1,21 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./index.css"
+import "./index.css";
 import { ThemeButton } from "./ThemeButton/ThemeButton";
-import { Input } from 'antd';
-import { GithubOutlined } from '@ant-design/icons';
+import { Input } from "antd";
+import { GithubOutlined } from "@ant-design/icons";
+import SearchBar from "./SearchBar/SearchBar";
 
 const { Search } = Input;
 
 export const Navbar = () => {
 
-    const onSearch = (value) => console.log(value);
-
   return (
     <div className={"navbar"}>
+      <h1 className="link"> <a href = "/">{window.location.pathname == "/" ? "Weather Dashboard" : "Main Page"}</a></h1>
+      <SearchBar />
       <ThemeButton/>
-      <Search style={{maxWidth: '40%'}} size="large" placeholder="input search text" onSearch={onSearch} enterButton />
-      <button className={"github"}><GithubOutlined/> GitHub</button>
     </div>
   );
 };
