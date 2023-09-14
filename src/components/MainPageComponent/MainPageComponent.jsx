@@ -54,8 +54,10 @@ export const MainPageComponent = () => {
           type="primary"
           icon={<GithubOutlined />}
           style={{ backgroundColor: "#78bedc" }}
+          href="https://github.com/BengalCatBalu/weather-app/tree/main"
         >
           GitHub
+
         </Button>
       </div>
       <Image
