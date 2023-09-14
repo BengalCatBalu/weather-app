@@ -1,8 +1,4 @@
 import React from "react";
-import { TimeCard } from "../Cards/TimeCard/TimeCard";
-import { MainCard } from "../Cards/MainCard/MainCard";
-import { LastDaysCard } from "../Cards/LastDaysCard/LastDaysCard";
-import { HourlyForecast } from "../Cards/HourlyForecast/HourlyForecast";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import BigCard from "../Cards/BigCard/BigCard";
