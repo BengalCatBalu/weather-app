@@ -1,0 +1,55 @@
+.graphicCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vh;
+    width: 55vw;
+    height: 80%;
+    background-color: var(--primary-text-color);
+    border-radius: 2rem;
+    border: 0.15rem solid #b6b6d1;
+}
+
+.graphic_title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    white-space: nowrap;
+    margin-right: 60%;
+    color: var(--additional-text-color);
+}
+
+.daysList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 2vw;
+    height: 15%;
+    margin-top: 1vh;
+    color: var(--additional-text-color);
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 1024px) {
+    .graphicCard {
+        width: 100vw;
+        border-radius: 0;
+        height: 40vh;
+        border: 0px;
+        gap: 3vh;
+    }
+
+    .graphic_title {
+        margin-right: 0;
+    }
+
+    .daysList {
+        gap: 1.5vw;
+        margin-top: 0.5vh;
+    }
+}

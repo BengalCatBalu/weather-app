@@ -1,0 +1,25 @@
+.small_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.title_sm {
+    font-size: calc(1vw);
+    margin-top: 0.7rem
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .small_column {
+        width: 90%;
+    }
+    .title_sm {
+        font-size: calc(0.5rem + 1vw);
+        margin-top: 0.5rem;
+    }
+}

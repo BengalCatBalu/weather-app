@@ -1,0 +1,134 @@
+.big-card {
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    height: 40vh;
+    border-radius: 2rem;
+    background-size: cover;
+    background-position: center;
+    margin: 0.5rem;
+    position: relative;
+    background-image: url('./../../../../public/cloud.jpg');
+  }
+
+  .big-card-loading {
+    display: flex;
+    width: 95vw;
+    height: 40vh;
+    border-radius: 2rem;
+    background-size: cover;
+    background-position: center;
+    margin: 0.5rem;
+    position: relative;
+    background-image: url('./../../../../public/cloud.jpg');
+  }
+  
+.leftpart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: var(--primary-text-color);
+    width: 40%;
+    margin-left: 1%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: var(--primary-text-color);
+    width: 60%;
+    margin-right: 2%;
+}
+
+.temperature {
+    font-size: 7rem;
+    margin-top: 1rem;
+    margin-left: -0.5rem;
+}
+
+.city {
+    font-size: 2rem;
+    margin-top: -6.5rem;
+    margin-left: 1.5rem;
+    white-space: nowrap;
+}
+.block1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.block2 {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.time {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Mobile phone */
+@media (max-width: 768px) {
+    .big-card {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100vw;
+        border-radius: 0rem;
+        height: 45vh;
+        gap: 1.5rem;
+        margin: 0.5rem auto;
+    }
+
+    .leftpart {
+        flex-direction: row;
+        width: 95vw;
+        margin-left: 2.5vw;
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+
+    .block1 {
+        height: 100%;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .right {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .temperature {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .city {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .block2 {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .time {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .spin {
+        display: none;
+    }
+}

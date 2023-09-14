@@ -32,10 +32,11 @@ const SearchBar = () => {
     return (
       <AutoComplete
         options={options}
-        style={{ width: '20rem' }}
+        style={{ width: '15rem' }}
         onSearch={handleSearchChange}
         onSelect={handleSelect}
         placeholder="Search city"
+        className="search-mobile"
       >
         <Input.Search size="large" style={{marginTop: '-0.3rem'}} />
       </AutoComplete>

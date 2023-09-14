@@ -1,7 +1,8 @@
 :root {
-    --primary-bg-color: #ffffff;
-    --primary-text-color: #000000;
-    --primary-cards-color: hwb(201 94% 0%);
+    --primary-bg-color: #f8f8ff;
+    --primary-text-color: #ffffff;
+    --primary-cards-color: #a9e2fa;
+    --additional-text-color: #0000006b;
     --primary-font-size-small: 1rem;
     --primary-font-size-medium: 1.5rem;
     --primary-font-size-large: 2.5rem;
@@ -28,4 +29,12 @@ html, body {
 a {
     text-decoration: none;
     color: var(--primary-text-color);
+}
+
+@media screen and (max-width: 1024px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--primary-text-color);
+    }
 }

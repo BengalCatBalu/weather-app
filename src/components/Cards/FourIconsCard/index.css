@@ -1,0 +1,93 @@
+.fourItemsCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    background-color: var(--primary-text-color);
+    border: 0.15rem solid #b6b6d1;
+    border-radius: 2rem;
+    width: 35vw;
+    height: 30vh;
+}
+
+.leftIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0.5rem;
+    width: 20%;
+    height: 100%;
+}
+
+.rightIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0.5rem;
+    width: 20%;
+    height: 100%;
+}
+
+.smallRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 0.5rem;
+    color: var(--primary-cards-color)
+}
+
+.smallColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2.25rem;
+    margin-left: 3rem;
+}
+
+.small {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    color: var(--additional-text-color)
+}
+
+.smaller {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    color: var(--additional-text-color)
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+    .fourItemsCard {
+        width: 100vw;
+        border-radius: 0;
+        border: 0px;
+        height: 20vh;
+        margin-top: -1rem;
+    }
+    .smallRow {
+        width: 30%;
+        margin: 0.9rem;
+    }
+    .smallColumn {
+        margin: 0.5rem;
+        margin-left: 2.5rem;
+    }
+    .small {
+        font-size: 1rem;
+    }
+    .smaller {
+        font-size: 0.75rem;
+    }
+}

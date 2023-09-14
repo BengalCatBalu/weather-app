@@ -1,0 +1,56 @@
+.smallCard {
+    width: 35vw;
+    border-radius: 1rem;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    background-image: linear-gradient(to top right, #b7ccdb,#80c7e3, #63b8d7);
+}
+
+.leftSmall {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    width: 30%;
+}
+
+.rightSmall {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+    width: 30%;
+}
+
+.small_sign {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.smaller_sign {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem;
+    white-space: nowrap;
+}
+
+/* Mobile */
+
+@media (max-width: 1024px) {
+    .smallCard {
+        width: 100vw;
+        border-radius: 0rem;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

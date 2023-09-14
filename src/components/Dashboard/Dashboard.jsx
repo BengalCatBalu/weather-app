@@ -5,6 +5,10 @@ import { LastDaysCard } from "../Cards/LastDaysCard/LastDaysCard";
 import { HourlyForecast } from "../Cards/HourlyForecast/HourlyForecast";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import BigCard from "../Cards/BigCard/BigCard";
+import FourIconsCard from "../Cards/FourIconsCard/FourIconsCard";
+import { SmallCard } from "../Cards/SmallCard/SmallCard";
+import GraphicCard from "../Cards/GraphicCard/GraphicCard";
 
 export const Dashboard = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -46,28 +50,18 @@ export const Dashboard = () => {
 
   return (
     <section className={"content"}>
+      <BigCard
+        city={weatherData?.name}
+        timeZoneOffset={weatherData?.timezone}
+        temperature={parseFloat((weatherData?.main.temp - 273.15).toFixed(1))}
+        main={weatherData?.weather[0].main}
+      />
       <div className={"first_row"}>
-        <TimeCard
-          city={weatherData?.name}
-          timeZoneOffset={weatherData?.timezone}
-        />
-        <MainCard
-          temperature={parseFloat((weatherData?.main.temp - 273.15).toFixed(1))}
-          feelslike={parseFloat(
-            (weatherData?.main.feels_like - 273.15).toFixed(1)
-          )}
-          sunrise={sunrise}
-          sunset={sunset}
-          main={weatherData?.weather[0].main}
-          humidity={weatherData?.main.humidity}
-          windSpeed={weatherData?.wind.speed}
-          pressure={weatherData?.main.pressure}
-          uv={weatherData?.visibility}
-        />
-      </div>
-      <div className={"second_row"}>
-        <LastDaysCard forecastData={forecastData}/>
-        <HourlyForecast forecastData = {forecastData} />
+        <div className="column">
+          <FourIconsCard humidity={weatherData?.main.humidity} wind = {weatherData?.wind.speed} sunset = {sunset} sunrise = {sunrise} />
+          <SmallCard feelsLike = {weatherData?.main.feels_like} pressure = {weatherData?.main.pressure} />
+        </div>
+        <GraphicCard forecastData = {forecastData}/>
       </div>
     </section>
   );
