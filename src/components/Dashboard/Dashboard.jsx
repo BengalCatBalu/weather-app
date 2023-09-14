@@ -47,7 +47,7 @@ export const Dashboard = () => {
   return (
     <section className={"content"}>
       <BigCard
-        city={weatherData?.name}
+        city={city}
         timeZoneOffset={weatherData?.timezone}
         temperature={parseFloat((weatherData?.main.temp - 273.15).toFixed(1))}
         main={weatherData?.weather[0].main}
