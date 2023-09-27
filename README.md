@@ -1,4 +1,4 @@
-# Welcome to WeatherMate! ☀️🌧️
+# Welcome to WeatherApp! ☀️🌧️
 
 ## Your Go-To Weather Forecasting App
 
